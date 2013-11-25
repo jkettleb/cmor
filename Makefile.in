@@ -112,6 +112,7 @@ test_C: cmor
 	@rm -f ./ipcc_test_code ; ${CC} ${CFLAGS} ${USERCFLAGS} @CPPFLAGS@  Test/ipcc_test_code.c -L${PREFIX}/lib -I${PREFIX}/include  -L. -lcmor ${NCCFLAGS} ${NCLDFLAGS} ${UDUNITS2LDFLAGS} ${UDUNITS2FLAGS} ${UUIDLDFLAGS} ${UUIDFLAGS} -o ipcc_test_code  ${VERB}; ./ipcc_test_code ${VERB}
 	@rm -f test_grid ; ${CC} ${CFLAGS} ${USERCFLAGS} @CPPFLAGS@  Test/test_grid.c -L${PREFIX}/lib -I${PREFIX}/include  -L. -lcmor ${NCCFLAGS} ${NCLDFLAGS} ${UDUNITS2LDFLAGS} ${UDUNITS2FLAGS} ${UUIDLDFLAGS} ${UUIDFLAGS} -o test_grid ${VERB}; ./test_grid ${VERB};
 	@rm -f test_lots_of_variables ; ${CC} ${CFLAGS} ${USERCFLAGS} @CPPFLAGS@  Test/test_lots_of_variables.c -L${PREFIX}/lib -I${PREFIX}/include  -L. -lcmor ${NCCFLAGS} ${NCLDFLAGS} ${UDUNITS2LDFLAGS} ${UDUNITS2FLAGS} ${UUIDLDFLAGS} ${UUIDFLAGS} -o test_lots_of_variables ${VERB}; ./test_lots_of_variables ${VERB};
+	@rm -f test_unit_cat_unique ; ${CC} ${CFLAGS} ${USERCFLAGS} @CPPFLAGS@  Test/test_unit_cat_unique.c -L${PREFIX}/lib -I${PREFIX}/include  -L. -lcmor ${NCCFLAGS} ${NCLDFLAGS} ${UDUNITS2LDFLAGS} ${UDUNITS2FLAGS} ${UUIDLDFLAGS} ${UUIDFLAGS} -o test_unit_cat_unique ${VERB}; ./test_unit_cat_unique ${VERB};
 python:
 	@echo "Building Python interface"
 	@${PYTHONEXEC} setup.py install @CDATPREFIX@
